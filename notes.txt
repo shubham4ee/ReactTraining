@@ -1,0 +1,99 @@
+importing react using CDN LInks
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+creating element root using react
+creating App.js
+what is console.log(heading);
+
+// lec1_2
+how react Creates Nested Elements?
+
+creating nested elements in react makes it difficult to understand then how JXS solves this problem?
+what is crossorigin?
+
+what is npm?
+    manages pakages. it gives all the pakages and 
+
+how to add npm to our project?
+-> npm init
+fill all the details
+
+the most important package in react is?
+    bendler
+
+what it does ?
+    it bundle app and shift to production.
+    examples:
+        parcel
+        veet
+        webpack
+we will use parcel.
+
+how to use it?
+    it comes as node package
+    -> npm install -D parcel   // -D is fro Dev-dependencies we want parces as Dev-Dependencies.
+
+
+there are two types of dependencies
+dev dependencies
+normal dependencies
+
+package log : keeps track of exact verion 
+
+transitive dependencies : dependencies of dependencies
+
+every dependency has its own package.json and its own dependencies.
+
+to build our app using parcel:
+run : npx parcel index.html
+parcel have hosted our projecton on http://localhost:1234
+
+waht is npx?
+ npx is for executing a package we use npx.
+
+CDN is one way to use react in our project.
+another way is to install on local machine.
+
+
+to install react run
+-> npm install react
+
+to install react dom run
+-> npm i react-dom
+
+after this no no longer requried CDN.
+just import react and react dom in app.js
+after this when we build using parcel using -> npx parcel index.html 
+it will throw good type of error that browser scripts cannot have imports or exports.
+
+this can be solved by importing App.js in index.html as type="module"
+
+waht parcel is doing?
+    1. Dev build
+    2. Local Server
+    3. HMR = Hot Module Replacement
+    4. File watching algorith (written in c++)
+    5. catching faster build (these files are taken skpace in our folder)
+    6. it also does image optimization
+    7. minification, compression and bundeling of files
+    8. consistent hashing
+    9. code splitting
+    10. differential bundeling (to support on older browsers)
+    11. removes unused code.
+
+*********** buidin prduction ready app ****************8
+using parcel we can build our app to production ready.
+by running:
+-> npx parcel build index.html
+this will give error:
+@parcel/namer-default: Target "main" declares an output file path of "App.js" which does not match the compiled bundle type 
+"html".
+
+this says that main is declared  App.js not index.html as main
+so we have to remove : "main": "App.js", from package.json
+
+
+** to make our app compatable with older versions of browser we will use browserrs list
+browserslist.dev
+

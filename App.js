@@ -1,4 +1,6 @@
-
+// to import react from node modules
+import React from "react";
+import ReactDOM from "react-dom/client";
 
 //creating nested elements in react
 const parent = React.createElement(
